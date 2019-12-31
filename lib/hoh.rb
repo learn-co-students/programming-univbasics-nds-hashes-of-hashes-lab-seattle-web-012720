@@ -4,6 +4,8 @@
 #
 # The tests will guide your construction.
 #
+
+
 # PORTION_1 = {
 #   label: "Kingdom",
 #   sub_category: {
@@ -30,16 +32,20 @@
 #   sub_category: nil
 # }
 
-def naming_system
-  # Remember:
-  #  Kingdom
-  #  Phylum
-  #  Class
-  #  Order
-  #  Family
-  #  Genus
-  #  Species
-  # So, if we have the "Kingdom" node we should be able to "tunnel" into the
-  # HoH all the way to Species!
-
+def naming_system = {
+  :Kingdom => {
+    :Phylum => {
+      :Class => {
+        :Order => {
+          :Family => {
+            :Genus => {
+              :Species => {}
+            }
+          }
+        }
+      }
+    }
+  }
+};
+  
 end
